@@ -38,7 +38,7 @@ class Ticket(Base):
 
     id = Column(Integer , primary_key=True, index=True)
     user_id = Column(Integer , ForeignKey("users.id"), nullable=False)
-    evemt_id =Column(Integer, ForeignKey("events.id"), nullable =False)
+    event_id =Column(Integer, ForeignKey("events.id"), nullable =False)
     ticket_code = Column(String , unique=True , index =True , nullable=False)
     status = Column(String , default="valid")
     created_at = Column(
